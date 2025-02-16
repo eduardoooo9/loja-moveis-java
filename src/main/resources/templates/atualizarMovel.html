@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Móvel</title>
+</head>
+<body>
+<h1>Atualizar Móvel</h1>
+<form action="/atualizar-movel" method="POST">
+    <input type="number" name="id" hidden th:value="${id}">
+    Nome: <input type="text" id="nome" name="nome" th:value="${nome}"> <br>
+    Descrição: <input type="text" id="descricao" name="descricao" th:value="${descricao}"> <br>
+    Preço: <input type="number" id="preco" name="preco" th:value="${preco}"> <br>
+    ID Material: <input type="number" id="id_material" name="id_material" th:value="${id_material}"> <br>
+
+    <button type="submit">Atualizar</button>
+</form>
+</body>
+</html>

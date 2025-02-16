@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IDs Cadastrados</title>
+    <style>
+      .div-fora {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .div-dentro {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+<body>
+  <div class="div-fora">
+    <div class="div-dentro">
+      <h2>Materiais</h2>
+      <div th:each="material : ${materiais}">
+        <p>ID: <span th:text="${material.id}"></span></p>
+        <p>Nome: <span th:text="${material.nome}"></span></p>
+        <p>Descrição: <span th:text="${material.descricao}"></span></p>
+        <hr>
+      </div>
+    </div>
+    <div class="div-dentro">
+      <h2>Móveis</h2>
+      <div th:each="movel : ${moveis}">
+        <p>ID: <span th:text="${movel.id}"></span></p>
+        <p>Nome: <span th:text="${movel.nome}"></span></p>
+        <p>Descrição: <span th:text="${movel.descricao}"></span></p>
+        <p>Preço: R$ <span th:text="${movel.preco}"></span></p>
+        <p>ID Material: <span th:text="${movel.id_material}"></span></p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

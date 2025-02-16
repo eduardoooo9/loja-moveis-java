@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualiza Material</title>
+</head>
+<body>
+    <h1>Atualizar Material</h1>
+    <form action="/atualizar-material" method="POST">
+        <input hidden type="number" name="id" th:value="${id}">
+        Nome: <input type="text" id="nome" name="nome" th:value="${nome}"> <br>
+        Descrição: <input type="text" id="descricao" name="descricao" th:value="${desc}">
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

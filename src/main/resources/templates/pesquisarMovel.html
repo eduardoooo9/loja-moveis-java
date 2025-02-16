@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Móveis</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Pesquisar Móvel</h1>
+    <div>
+    <form action="/pesquisar-movel" method="post">
+        ID: <input type="number" id="id" name="id">
+        <button type="submit">buscar</button>
+    </form>
+
+    <p>Nome: <span th:utext="${nome}"></span></p>
+    <p>Descrição: <span th:utext="${descricao}"></span></p>
+    <p>Preço: <span th:utext="${preco}"></span></p>
+    <p>ID Material: <span th:utext="${id_material}"></span></p>
+
+
+    <form action="/deletar-movel" method="post">
+        <input hidden type="number" id="id" name="id" th:value="${id}">
+        <button type="submit">deletar</button>
+    </form>
+
+    <form action="/atualizar-movel" method="GET">
+        <input hidden type="number" id="id" name="id" th:value="${id}">
+        <input hidden type="text" id="nome" name="nome" th:value="${nome}">
+        <input hidden type="text" id="descricao" name="descricao" th:value="${descricao}">
+        <input hidden type="number" id="preco" name="preco" th:value="${preco}">
+        <input hidden type="number" id="id_material" name="id_material" th:value="${id_material}">
+        <button type="submit">atualizar</button>
+    </form>
+</div>
+</body>
+</html>
